@@ -16,6 +16,9 @@ export default function pageLoad() {
     navItems.forEach(renderNavList);
         function renderNavList(element) {
             var li = document.createElement('li');
+            if (element === "Home") {
+                li.setAttribute('class', 'active');
+            }
             ul.appendChild(li);
             li.innerHTML= li.innerHTML + element;
         }
